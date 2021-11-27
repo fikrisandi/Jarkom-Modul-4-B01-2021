@@ -11,6 +11,7 @@ Kelompok B01
 # CPT - VLSM
 
 - Pertama - tama, bagi topologi yang sudah diberikan ke dalam beberapa subnet kecil sesuai kebutuhan yang di inginkan :
+- 
 
 ![VLSM-1](https://user-images.githubusercontent.com/55092974/143673754-2c313a93-1a69-407d-a6e7-0d37bb5a57f1.JPG)
 
@@ -105,6 +106,13 @@ Dilakukan testing untuk melihat apakah routing telah benar berjalan :
 # GNS3 - CIDR
 
 - Pembagian subnet di CIDR berbeda dengan VLSM dimana pembagiannya dimulai dari yang terjauh dari cloud agar mempermudah routing sehingga didapatkan subnet sebagai berikut :
+![a](https://user-images.githubusercontent.com/90582800/143685451-b5737cc6-75b9-4311-a456-b1ea0d0c4a10.jpg)
+![b](https://user-images.githubusercontent.com/90582800/143685456-ccffddef-4151-4a93-9f2c-04c00f150596.jpg)
+![c](https://user-images.githubusercontent.com/90582800/143685458-d22d12de-4223-4995-ab7b-45b22233ce84.jpg)
+![d](https://user-images.githubusercontent.com/90582800/143685460-c3e1d910-7744-4fae-93f1-f5805c62e5cd.jpg)
+![e](https://user-images.githubusercontent.com/90582800/143685461-999b9cba-a44e-4e40-9070-360cc705f05c.jpg)
+![f](https://user-images.githubusercontent.com/90582800/143685465-10615a56-65ff-48c1-907c-262b9afc11cb.jpg)
+![g](https://user-images.githubusercontent.com/90582800/143685467-84d448d7-12e3-49ed-ac21-623dfa613387.jpg)
 
 ![CIDR](https://user-images.githubusercontent.com/55092974/143675411-149965d2-4f7a-4fcc-b499-c82b02b15b55.JPG)
 
