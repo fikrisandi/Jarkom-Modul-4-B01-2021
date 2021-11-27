@@ -11,7 +11,7 @@ Kelompok B01
 # CPT - VLSM
 
 - Pertama - tama, bagi topologi yang sudah diberikan ke dalam beberapa subnet kecil sesuai kebutuhan yang di inginkan :
-- 
+
 
 ![VLSM-1](https://user-images.githubusercontent.com/55092974/143673754-2c313a93-1a69-407d-a6e7-0d37bb5a57f1.JPG)
 
