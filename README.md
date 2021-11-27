@@ -62,6 +62,25 @@ Kelompok B01
 | **Total** | **5845**  | **/19** |
 
 
+Pada CPT, buat topologi seperti berikut :
+
+![image](https://user-images.githubusercontent.com/90582800/143684888-c26ea16b-61ec-4e70-b5c8-9412c50693e8.png)
+
+
+Pada setiap router, dimasukkan IP dan netmask sesuai dengan subnet yang ditujunya :
+![image](https://user-images.githubusercontent.com/90582800/143684968-6779d442-c3e5-4c64-8cce-c5e93d722681.png)
+
+Pada setiap client dan server, dimasukkan IP, netmask, dan gateway pada menu IP configuration di bar desktop sesuai kebutuhannya :
+![image](https://user-images.githubusercontent.com/90582800/143685030-6d4d5fd9-2d04-4ea3-a63b-d54dbcfcc192.png)
+
+Untuk setiap router, dilakukan routing sesuai dengan subnet yang dihubungkannya :
+![image](https://user-images.githubusercontent.com/90582800/143685102-c7de08e6-44db-4ac3-be30-73a3d5c7fd8a.png)
+
+Dilakukan testing untuk melihat apakah routing telah benar berjalan :
+![image](https://user-images.githubusercontent.com/90582800/143685175-dd0f8561-31e6-48f8-83ac-3883089f844a.png)
+
+
+
 # GNS3 - CIDR
 
 - Pembagian subnet di CIDR berbeda dengan VLSM dimana pembagiannya dimulai dari yang terjauh dari cloud agar mempermudah routing sehingga didapatkan subnet sebagai berikut :
@@ -91,3 +110,195 @@ Kelompok B01
 |  A15   |    /30    |   192.177.128.0  | 255.255.252.252 |
 
 - Kemudian buat topologi pada GNS3 seperti berikut :
+
+![image](https://user-images.githubusercontent.com/90582800/143684490-9346709f-b43f-41a0-8c4b-4ed4672cc347.png)
+
+Pada GNS3, dimasukkan konfigurasi seperti berikut :
+
+
+#### Foosha
+
+
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 192.177.16.1
+	netmask 255.255.254.0
+
+auto eth2
+iface eth2 inet static
+	address 192.177.0.5
+	netmask 255.255.255.252
+
+auto eth3
+iface eth3 inet static
+	address 192.177.0.9
+	netmask 255.255.255.252
+
+auto eth4
+iface eth4 inet static
+	address 192.177.0.21
+	netmask 255.255.255.252
+```
+
+
+
+#### Guanhao
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.177.0.10
+	netmask 255.255.255.252
+	
+
+auto eth1
+iface eth1 inet static
+	address 192.177.4.1
+	netmask 255.255.252.0
+	
+
+auto eth2
+iface eth2 inet static
+	address 192.177.2.1
+	netmask 255.255.254.0
+	gateway 192.177.2.2
+
+auto eth3
+iface eth3 inet static
+	address 192.177.0.13
+	netmask 255.255.255.252
+```
+
+
+
+#### Alabasta
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.181.128.2
+	netmask 255.255.254.0
+	gateway 192.181.128.1
+
+auto eth1
+iface eth1 inet static
+	address 192.181.130.1
+	netmask 255.255.255.240
+```
+
+
+
+
+#### Oimo
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.177.0.14
+	netmask 255.255.255.252
+	gateway 192.177.0.13
+
+auto eth1
+iface eth1 inet static
+	address 192.177.0.17
+	netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+	address 192.177.1.1
+	netmask 255.255.255.0
+```
+
+
+
+#### Seastone
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.177.1.2
+	netmask 255.255.255.0
+	gateway 192.177.1.1
+
+auto eth1
+iface eth1 inet static
+	address 192.177.8.1
+	netmask 255.255.252.0
+```
+
+
+
+#### Water7
+
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.177.0.6
+	netmask 255.255.255.252
+	gateway 192.177.0.5
+
+auto eth1
+iface eth1 inet static
+	address 192.177.0.1
+	netmask 255.255.252.252
+
+auto eth2
+iface eth2 inet static
+	address 192.177.12.1
+	netmask 255.255.255.0
+```
+
+
+
+#### Pucci
+
+```
+auto eth0
+iface eth0 inet static
+	address 192.177.0.2
+	netmask 255.255.255.252
+	gateway 192.177.0.1
+
+auto eth1
+iface eth1 inet static
+	address 192.177.0.129
+	netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+	address 192.177.24.1
+	netmask 255.255.248.0
+```
+
+
+Setelah itu dilakukan routing seperti contoh di bawah :
+
+#### Foosha
+
+```
+#A1	
+route add -net 192.177.0.128 netmask 255.255.255.128 gw 192.177.0.6
+
+#A2
+route add -net 192.177.12.0 netmask 255.255.252.0 gw 192.177.0.6
+.
+.
+.
+```
+
+Setelah routing, dimasukkan masukan berikut :
+
+Untuk semua Router :
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE -s 192.177.0.0/16
+```
+
+Dan untuk semua node :
+```
+echo nameserver 192.177.122.1 > /etc/resolv.conf
+```
