@@ -118,7 +118,8 @@ Dilakukan testing untuk melihat apakah routing telah benar berjalan :
 
 - Dari gambar diatas dapat kita buat tree subnet CIDR seperti berikut :
 
-![CIDR-Tree](https://user-images.githubusercontent.com/55092974/143675415-29b09b54-e61f-4d3d-9382-b1200d7db421.JPG)
+![Picture1](https://user-images.githubusercontent.com/90582800/143685586-ccbee67e-2ce1-47c7-87f9-8d89d06af17b.jpg)
+
 
 | Subnet |  Netmask  |    IP        |  Subnet Mask  |
 | :----: | :-------: | :----------: | :-----------: |
