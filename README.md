@@ -113,8 +113,8 @@ Dilakukan testing untuk melihat apakah routing telah benar berjalan :
 ![e](https://user-images.githubusercontent.com/90582800/143685461-999b9cba-a44e-4e40-9070-360cc705f05c.jpg)
 ![f](https://user-images.githubusercontent.com/90582800/143685465-10615a56-65ff-48c1-907c-262b9afc11cb.jpg)
 ![g](https://user-images.githubusercontent.com/90582800/143685467-84d448d7-12e3-49ed-ac21-623dfa613387.jpg)
+![h](https://user-images.githubusercontent.com/90582800/143685502-6312118c-5d22-4e93-a379-431ab470f914.jpg)
 
-![CIDR](https://user-images.githubusercontent.com/55092974/143675411-149965d2-4f7a-4fcc-b499-c82b02b15b55.JPG)
 
 - Dari gambar diatas dapat kita buat tree subnet CIDR seperti berikut :
 
