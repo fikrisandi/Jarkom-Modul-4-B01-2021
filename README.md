@@ -69,7 +69,7 @@ Pada CPT, buat topologi seperti berikut :
 
 
 
-Pada setiap router, dimasukkan IP dan netmask sesuai dengan subnet yang ditujunya :
+Pada setiap router, dimasukkan IP dan netmask sesuai dengan subnet yang dituju :
 <br><br>
 
 ![image](https://user-images.githubusercontent.com/90582800/143684968-6779d442-c3e5-4c64-8cce-c5e93d722681.png)
@@ -85,7 +85,7 @@ Pada setiap client dan server, dimasukkan IP, netmask, dan gateway pada menu IP 
 
 
 
-Untuk setiap router, dilakukan routing sesuai dengan subnet yang dihubungkannya :
+Untuk setiap router, dilakukan routing sesuai dengan subnet yang dihubungkan :
 <br><br>
 
 ![image](https://user-images.githubusercontent.com/90582800/143685102-c7de08e6-44db-4ac3-be30-73a3d5c7fd8a.png)
