@@ -6,7 +6,7 @@ Kelompok B01
 | :------------: | :-------------------------------------: |
 | 05111940000120 |       Jonathan Timothy Siregar          |
 | 05111940000134 |      Muhammad Fikri Sandi Pratama       |
-| 05111940000150 |         Mohammad Thoriq Huda            |
+| 05111940000207 |         Mohammad Thoriq Huda            |
 
 # CPT - VLSM
 
