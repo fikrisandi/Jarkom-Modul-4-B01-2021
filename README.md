@@ -62,3 +62,32 @@ Kelompok B01
 | **Total** | **5845**  | **/19** |
 
 
+# GNS3 - CIDR
+
+- Pembagian subnet di CIDR berbeda dengan VLSM dimana pembagiannya dimulai dari yang terjauh dari cloud agar mempermudah routing sehingga didapatkan subnet sebagai berikut :
+
+![CIDR](https://user-images.githubusercontent.com/55092974/143675411-149965d2-4f7a-4fcc-b499-c82b02b15b55.JPG)
+
+- Dari gambar diatas dapat kita buat tree subnet CIDR seperti berikut :
+
+![CIDR-Tree](https://user-images.githubusercontent.com/55092974/143675415-29b09b54-e61f-4d3d-9382-b1200d7db421.JPG)
+
+| Subnet |  Netmask  |    IP        |  Subnet Mask  |
+| :----: | :-------: | :----------: | :-----------: |
+|   A1   |    /25    |   192.178.8.0    | 255.255.255.128 |
+|   A2   |   /22     |   192.178.32.0   | 255.255.252.0   |
+|   A3   |    /30    |   192.178.16.0   | 255.255.255.252 |
+|   A4   |     /21   |   192.178.0.0    | 255.255.248.0   |
+|   A5   |     /22   |   192.178.128.0  | 255.255.252.0   |
+|   A6   |    /30    |   192.178.64.0   | 255.255.255.252 |
+|   A7   |   /22     |   192.177.36.0   | 255.255.252.0   |
+|   A8   |    /24    |   192.177.4.0    | 255.255.255.0   |
+|   A9   |    /30    |   192.177.64.0   | 255.255.255.252 |
+|  A10   |    /30    |   192.177.16.10  | 255.255.255.252 |
+|  A11   |    /22    |   192.177.0.0    | 255.255.252.0   |
+|  A12   |     /23   |   192.177.32.0   | 255.255.252.4   |
+|  A13   |     /28   |   192.177.34.0   | 255.255.255.240 |
+|  A14   |    /30    |   192.177.8.0    | 255.255.252.252 |
+|  A15   |    /30    |   192.177.128.0  | 255.255.252.252 |
+
+- Kemudian buat topologi pada GNS3 seperti berikut :
